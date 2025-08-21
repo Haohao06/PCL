@@ -1113,6 +1113,9 @@ Retry:
                     Uuid = Uuid.Substring(0, 27) & (Long.Parse(Uuid.Substring(27), Globalization.NumberStyles.AllowHexSpecifier) + 1).ToString("X").PadLeft(5, "0")
                 Loop
         End Select
+
+        Uuid = "31f96f11-a200-34a2-af74-f21185933e00" '#魔改：自定义离线UUID
+
         Return Uuid
     End Function
     '根据用户名返回对应 UUID，需要多线程
